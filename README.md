@@ -12,23 +12,16 @@ Before proceeding, ensure you have the following prerequisites installed and con
 
 ## Steps
 
-### 1. Dockerfile
+### 1. Clone the 2048 Repository
 
-Create a Dockerfile with the following content:
+Clone the 2048 game repository from your repository:
 
-```Dockerfile
-FROM ubuntu:22.04
+```bash
+git clone https://github.com/Sibiraj20/2048-Deployment.git
 
-RUN apt-get update && \
-    apt-get install -y nginx zip curl && \
-    echo "daemon off;" >>/etc/nginx/nginx.conf && \
-    curl -o /var/www/html/master.zip -L https://codeload.github.com/gabrielecirulli/2048/zip/master && \
-    cd /var/www/html/ && unzip master.zip && mv 2048-master/* . && rm -rf 2048-master master.zip
-
-EXPOSE 80
-
-CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
+cd 2048-Deployment
 ```
+
 ### 2. Build the Docker Image
 
 Build the Docker image from the directory containing the Dockerfile:
