@@ -6,7 +6,7 @@ This guide will walk you through the steps to deploy the popular 2048 game on Am
 
 Before proceeding, ensure you have the following prerequisites installed and configured:
 
-- Docker installed on your local machine.
+- Docker installed on the local machine.
 - An AWS account with permissions to create resources in Elastic Beanstalk.
 - AWS Command Line Interface (CLI) installed and configured with appropriate access keys.
 
